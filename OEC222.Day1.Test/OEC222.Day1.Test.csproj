@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OEC222.Day1\OEC222.Day1.csproj" />
+    <ProjectReference Include="..\OEC222.Lib\OEC222.Lib.csproj" />
   </ItemGroup>
 
 </Project>
