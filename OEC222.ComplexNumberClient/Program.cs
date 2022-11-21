@@ -20,25 +20,31 @@ namespace OEC222.ComplexNumberClient
 
             Console.Write("Indicare operazione (+,-,*,/):  ");
             string op = Console.ReadLine();
-            if(op == "+")
+
+            ILogger logger = FileLogger.GetIstance();
+            //ILogger logger = new ConsoleLogger();
+            if (op == "+")
             {
-                Console.WriteLine("Somma tra : " + c1.ToString() + " e " + c2.ToString() + " : " + c1.Sum(c2).ToString());
+                logger.Info("Somma tra : " + c1.ToString() + " e " + c2.ToString() + " : " + c1.Sum(c2).ToString());
             } 
             else if(op == "-")
             {
-
-            } 
+                string res = $"Differenza tra {c1} e {c2}: {c1.Sub(c2)}";
+                string res1 = string.Format("Differenza tra {0} e {1}: {2}", c1, c2, c1.Sub(c2));
+                logger.Info(res);
+            }
             else if(op == "*")
             {
-
+                logger.Info($"Prodotto tra {c1} e {c2}: {c1.Mult(c2)}");
             } 
             else if(op == "/")
             {
+                logger.Info($"Quoziente tra {c1} e {c2}: {c1.Div(c2)}");
 
-            } 
+            }
             else
             {
-
+                logger.Error("operazione non valida");
             }
 
             //switch (op)
@@ -52,10 +58,7 @@ namespace OEC222.ComplexNumberClient
 
             //}
 
-
-
-
-
+           
 
             Console.ReadLine();
 

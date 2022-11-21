@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Lib", "OEC222.Lib\OE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.ComplexNumberClient", "OEC222.ComplexNumberClient\OEC222.ComplexNumberClient.csproj", "{37AB0872-7602-4A59-B254-F15BB46F29D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.StaticExample", "OEC222.StaticExample\OEC222.StaticExample.csproj", "{7836FD92-973C-4568-99BF-A648754C54E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{37AB0872-7602-4A59-B254-F15BB46F29D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AB0872-7602-4A59-B254-F15BB46F29D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AB0872-7602-4A59-B254-F15BB46F29D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7836FD92-973C-4568-99BF-A648754C54E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7836FD92-973C-4568-99BF-A648754C54E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7836FD92-973C-4568-99BF-A648754C54E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7836FD92-973C-4568-99BF-A648754C54E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

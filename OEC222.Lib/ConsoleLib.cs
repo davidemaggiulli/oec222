@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OEC222.Lib
 {
-    public class ConsoleLib
+    public static class ConsoleLib
     {
         public static double ReadDoubleFromConsole(string msg)
         {
@@ -18,7 +18,6 @@ namespace OEC222.Lib
                 input = Console.ReadLine();
             } while (!double.TryParse(input, out result));
             return result;
-
         }
     }
 }

@@ -23,6 +23,33 @@ namespace OEC222.Day1.Test
         }
 
         [Fact]
+        public void ComplexNumberStaticSum()
+        {
+            ComplexNumber n1 = new ComplexNumber(10, 10);
+            ComplexNumber n2 = new ComplexNumber(20, -5);
+
+            ComplexNumber sum = ComplexNumber.Sum(n1, n2);
+
+            Assert.NotNull(sum);
+            Assert.Equal(30, sum.Real);
+            Assert.Equal(5, sum.Imaginary);
+        }
+
+        [Fact]
+        public void ComplexNumberSum2()
+        {
+            ComplexNumber n1 = new ComplexNumber(10, 10);
+            ComplexNumber n2 = new ComplexNumber(20, -5);
+
+            ComplexNumber sum = n1 + n2;
+
+            Assert.NotNull(sum);
+            Assert.Equal(30, sum.Real);
+            Assert.Equal(5, sum.Imaginary);
+        }
+
+
+        [Fact]
         public void ComplexNumberSub()
         {
             ComplexNumber n1 = new ComplexNumber(10, 10);
@@ -59,6 +86,19 @@ namespace OEC222.Day1.Test
             Assert.Equal(double.NaN, div.Real);
             Assert.Equal(double.NaN, div.Imaginary);
             //TODO Rivedere con la lamba expression + gestione delle eccezioni.
+        }
+
+
+        [Fact]
+        public void ConiugatoWithOperatorTest()
+        {
+            ComplexNumber c = new ComplexNumber(10, 4);  //Arrange
+
+            var cc = ~c;    //Act
+            
+            Assert.NotNull(cc);    //Assert
+            Assert.Equal(10, cc.Real);
+            Assert.Equal(-4, cc.Imaginary);
         }
     }
 }
