@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.OutRefExample", "OEC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccounts", "BankAccounts\BankAccounts.csproj", "{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateExamples", "DelegateExamples\DelegateExamples.csproj", "{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

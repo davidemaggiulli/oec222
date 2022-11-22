@@ -7,6 +7,7 @@ namespace BankAccounts
     {
         private static ILogger _logger;
         private static IBankAccounts _bankAccounts;
+        delegate bool SearchFunc(Account a);
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -179,22 +180,76 @@ namespace BankAccounts
         }
 
 
-
         private static void AccountsByBankName()
         {
+            string bankName = ConsoleLib.ReadStringFromConsole("Nome banca:  ");
+             
+            IList<Account> accounts = SearchAccounts(a => a.BankName.Contains(bankName));
 
+            PrintAccounts(accounts);
         }
-        private static void AccountByHolder()
-        {
-
-        }
+        
         private static void AccountsByMinAmount()
         {
-
+            decimal minAmount = (decimal)ConsoleLib.ReadDoubleFromConsole("Importo minimo:  ");
+            IList<Account> accounts = SearchAccounts(a => a.Amount >= minAmount);
+            PrintAccounts(accounts);
         }
         private static void AccountsByAmountRange()
         {
+            decimal minAmount = (decimal)ConsoleLib.ReadDoubleFromConsole("Importo minimo:  ");
+            decimal maxAmount = (decimal)ConsoleLib.ReadDoubleFromConsole("Importo massimo:  ");
+            if(maxAmount < minAmount)
+            {
+                decimal temp = maxAmount;
+                maxAmount = minAmount;
+                minAmount = temp;
+            }
+            Func<Account, bool> search = a => a.Amount >= minAmount && a.Amount <= maxAmount;
+            IList<Account> accounts = SearchAccounts(a => search(a));
+            
+            PrintAccounts(accounts);
 
+        }
+
+        private static bool CheckIfBankNameIsBNL(Account account)
+        {
+            return account.BankName == "BNL";
+        }
+
+        private static void AccountByHolder()
+        {
+            string holder = ConsoleLib.ReadStringFromConsole("Nome titolare:  ");
+            Account account = null;
+            foreach(var a in _bankAccounts.GetAllAccounts())
+            {
+                if (a.Holder.Contains(holder))
+                {
+                    account = a;
+                    break;
+                }
+            }
+            if (account != null)
+                Console.WriteLine(account);
+        }
+        private static void PrintAccounts(IList<Account> accounts)
+        {
+            foreach (var a in accounts)
+                Console.WriteLine(a);
+        }
+
+
+        private static IList<Account> SearchAccounts(SearchFunc func)
+        {
+            IList<Account> accounts = new List<Account>();
+            foreach(var a in _bankAccounts.GetAllAccounts())
+            {
+                if (func(a))
+                {
+                    accounts.Add(a);
+                }
+            }
+            return accounts;
         }
     }
 }
