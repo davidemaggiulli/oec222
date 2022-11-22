@@ -1,12 +1,13 @@
-﻿namespace DelegateExamples
+﻿using OEC222.Lib;
+
+namespace DelegateExamples
 {
     internal class Program
     {
         //delegate bool SearchCondition(int num);
         //delegate bool SearchCondition1(Employee employee);
-        delegate bool SearchCondition<T>(T item);
 
-
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Delegate Examples");
@@ -22,52 +23,58 @@
 
 
             //Selezione E stampa tutti i numeri maggiori di 50
-            var numbers2 = Search(numbers, NumberGreatherThan50);
+            var numbers2 = EnumberableLib.Search(numbers, NumberGreatherThan50);
             Print(numbers2);
 
             //Selezione E stampa tutti i numeri tra -20 e +20
-            numbers2 = Search(numbers, NumberBetweenM20And20);
+            numbers2 = EnumberableLib.Search(numbers, NumberBetweenM20And20);
             Print(numbers2);
 
 
             //Selezione E stampa tutti i numeri negativi
-            numbers2 = Search(numbers, NumberIsNegative);
+            numbers2 = EnumberableLib.Search(numbers, NumberIsNegative);
             Print(numbers2);
 
 
             //Seleziona E stampa tutti i numeri > 100
-            numbers2 = Search(numbers, n => n > 100);
+            numbers2 = EnumberableLib.Search(numbers, n => n > 100);
             Print(numbers2);
 
             //Seleziona i numeri tra -20 e -25 o tra 15 e 16
-            numbers2 = Search(numbers, n => (n <= -20 && n >= -25) || (n >= 15 && n <= 16));
+            numbers2 = EnumberableLib.Search(numbers, n => (n <= -20 && n >= -25) || (n >= 15 && n <= 16));
 
 
             //Restituire il primo numero positivo
-            int num = GetFirstOrDefault(numbers, n => n > 0);
+            int num = EnumberableLib.GetFirstOrDefault(numbers, n => n > 0);
             if(num != 0)
                 Console.WriteLine(num);
 
 
             //Restituire il primo numero tra 40 e 50
-            num = GetFirstOrDefault(numbers, n => n >= 40 && n <= 50);
+            num = EnumberableLib.GetFirstOrDefault(numbers, n => n >= 40 && n <= 50);
             if (num != 0)
                 Console.WriteLine(num);
 
             //Restituire il primo numero maggiore di -20
-            num = GetFirstOrDefault(numbers, n => n > -20);
+            num = EnumberableLib.GetFirstOrDefault(numbers, n => n > -20);
+            num = numbers.GetFirstOrDefault(n => n > -20);
             if (num != 0)
                 Console.WriteLine(num);
 
             //Quanti elementi sono positivi?
-            Console.WriteLine(Count(numbers, n => n >= 0));
+            Console.WriteLine(EnumberableLib.Count(numbers, n => n >= 0));
 
 
             //Quanti elementi sono negativi?
-            Console.WriteLine(Count(numbers, n => n < 0));
+            Console.WriteLine(EnumberableLib.Count(numbers, n => n < 0));
 
             //Qaunti elementi tra -15 e 75?
-            Console.WriteLine(Count(numbers, n => n >= -15 && n <= 75));
+            Console.WriteLine(EnumberableLib.Count(numbers, n => n >= -15 && n <= 75));
+
+            //La media di tutti i numeri
+            double numAvg = numbers.Avg(n => n);
+            Console.WriteLine($"Media di tutti i numeri: {numAvg:F2}");
+
 
             #endregion
 
@@ -82,27 +89,39 @@
             };
 
             //La lista di tutti gli uomini
-            IEnumerable<Employee> employees2 = Search(employees, e => e.Gender == Gender.Male);
+            IEnumerable<Employee> employees2 = EnumberableLib.Search(employees, e => e.Gender == Gender.Male);
 
             //La lista di tutti gli uomini alti almeno 180cm
-            employees2 = Search<Employee>(employees, e => e.Gender == Gender.Male && e.Height >= 180);
+            employees2 = EnumberableLib.Search<Employee>(employees, e => e.Gender == Gender.Male && e.Height >= 180);
 
             //La lista di tutte le persone tra 150cm e 170cm
-            employees2 = Search(employees, e => e.Height >= 150 && e.Height <= 170);
+            employees2 = EnumberableLib.Search(employees, e => e.Height >= 150 && e.Height <= 170);
 
             //La lista di tutte le donne che guadagnano almeno 1000€
-            employees2 = Search(employees, e => e.Gender == Gender.Female && e.Ral >= 1000);
+            employees2 = EnumberableLib.Search(employees, e => e.Gender == Gender.Female && e.Ral >= 1000);
 
             //La lista di tutte le persone della famiglia Maggiulli
-            employees2 = Search(employees, e => e.LastName == "Maggiulli");
+            employees2 = EnumberableLib.Search(employees, e => e.LastName == "Maggiulli");
 
             //L'altezza media delle persone
+            double avg = EnumberableLib.Average(employees, e => e.Height);
+            Console.WriteLine($"Altezza media: {avg:F2}");
 
             //Il peso medio delle persone
+            avg = EnumberableLib.Average(employees, e => e.Weight);
+            Console.WriteLine($"Peso medio: {avg:F2}");
 
             //La RAL media delle persone
+            avg = EnumberableLib.Avg(employees, e => e.Ral);
+            Console.WriteLine($"RAL media: {avg:F2}");
 
             //La RAL media di tutte le donne
+            avg = EnumberableLib.Avg(EnumberableLib.Search(employees, e => e.Gender == Gender.Female), e => e.Ral);
+
+            //L'ultima persona con stipendio più alto della media
+            avg = employees.Avg(x => x.Ral);
+            Employee emp = employees.GetLastOrDefault(x => x.Ral >= (decimal)avg);
+
 
         }
 
@@ -143,33 +162,6 @@
         //    return employees1;
         //}
 
-        private static IEnumerable<T> Search<T>(IEnumerable<T> items, SearchCondition<T> searchCondition)
-        {
-            IList<T> result = new List<T>();
-            foreach (var item in items)
-                if (searchCondition(item))
-                    result.Add(item);
-            return result;
-        }
-
-        private static T GetFirstOrDefault<T>(IEnumerable<T> items, SearchCondition<T> searchCondition)
-        {
-            foreach (var n in items)
-                if (searchCondition(n))
-                    return n;
-
-            return default(T);
-        }
-
-        private static int Count<T>(IEnumerable<T> items, SearchCondition<T> searchCondition)
-        {
-            int count = 0;
-            foreach (var n in items)
-            {
-                if (searchCondition(n))
-                    count++;
-            }
-            return count;
-        }
+        
     }
 }

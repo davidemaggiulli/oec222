@@ -183,8 +183,10 @@ namespace BankAccounts
         private static void AccountsByBankName()
         {
             string bankName = ConsoleLib.ReadStringFromConsole("Nome banca:  ");
-             
-            IList<Account> accounts = SearchAccounts(a => a.BankName.Contains(bankName));
+
+            IEnumerable<Account> accounts = _bankAccounts.GetAllAccounts().Where(x => x.BankName.Contains(bankName));
+                
+                //SearchAccounts(a => a.BankName.Contains(bankName));
 
             PrintAccounts(accounts);
         }
@@ -192,7 +194,9 @@ namespace BankAccounts
         private static void AccountsByMinAmount()
         {
             decimal minAmount = (decimal)ConsoleLib.ReadDoubleFromConsole("Importo minimo:  ");
-            IList<Account> accounts = SearchAccounts(a => a.Amount >= minAmount);
+            //IList<Account> accounts = SearchAccounts(a => a.Amount >= minAmount);
+            var accounts = _bankAccounts.GetAllAccounts().Search(a => a.Amount >= minAmount);
+            var accounts1 = _bankAccounts.GetAllAccounts().Where(a => a.Amount >= minAmount);
             PrintAccounts(accounts);
         }
         private static void AccountsByAmountRange()
@@ -206,7 +210,7 @@ namespace BankAccounts
                 minAmount = temp;
             }
             Func<Account, bool> search = a => a.Amount >= minAmount && a.Amount <= maxAmount;
-            IList<Account> accounts = SearchAccounts(a => search(a));
+            IEnumerable<Account> accounts = _bankAccounts.GetAllAccounts().Where(search);
             
             PrintAccounts(accounts);
 
@@ -220,19 +224,20 @@ namespace BankAccounts
         private static void AccountByHolder()
         {
             string holder = ConsoleLib.ReadStringFromConsole("Nome titolare:  ");
-            Account account = null;
-            foreach(var a in _bankAccounts.GetAllAccounts())
-            {
-                if (a.Holder.Contains(holder))
-                {
-                    account = a;
-                    break;
-                }
-            }
+            //Account account = null;
+            //foreach(var a in _bankAccounts.GetAllAccounts())
+            //{
+            //    if (a.Holder.Contains(holder))
+            //    {
+            //        account = a;
+            //        break;
+            //    }
+            //}
+            Account account = _bankAccounts.GetAllAccounts().FirstOrDefault(x => x.Holder.Contains(holder));
             if (account != null)
                 Console.WriteLine(account);
         }
-        private static void PrintAccounts(IList<Account> accounts)
+        private static void PrintAccounts(IEnumerable<Account> accounts)
         {
             foreach (var a in accounts)
                 Console.WriteLine(a);
