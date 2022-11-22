@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.OOP", "OEC222.OOP\OEC222.OOP.csproj", "{787F8D60-F9E7-48B2-B426-021D2A470382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.OOP", "OEC222.OOP\OEC222.OOP.csproj", "{787F8D60-F9E7-48B2-B426-021D2A470382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Lib.Test", "OEC222.Lib.Test\OEC222.Lib.Test.csproj", "{E976D888-726D-4306-ABAD-57D7A23BAD2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Lib.Test", "OEC222.Lib.Test\OEC222.Lib.Test.csproj", "{E976D888-726D-4306-ABAD-57D7A23BAD2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Lib", "OEC222.Lib\OEC222.Lib.csproj", "{3AD2BE44-4205-49DA-BC84-73E75A24E765}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Lib", "OEC222.Lib\OEC222.Lib.csproj", "{3AD2BE44-4205-49DA-BC84-73E75A24E765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.ComplexNumberClient", "OEC222.ComplexNumberClient\OEC222.ComplexNumberClient.csproj", "{37AB0872-7602-4A59-B254-F15BB46F29D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.ComplexNumberClient", "OEC222.ComplexNumberClient\OEC222.ComplexNumberClient.csproj", "{37AB0872-7602-4A59-B254-F15BB46F29D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.StaticExamples", "OEC222.StaticExample\OEC222.StaticExamples.csproj", "{7836FD92-973C-4568-99BF-A648754C54E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.StaticExamples", "OEC222.StaticExample\OEC222.StaticExamples.csproj", "{7836FD92-973C-4568-99BF-A648754C54E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.OutRefExample", "OEC222.OutRefExample\OEC222.OutRefExample.csproj", "{194D953C-89E1-42F7-AB74-776ABEDB9ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccounts", "BankAccounts\BankAccounts.csproj", "{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{7836FD92-973C-4568-99BF-A648754C54E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7836FD92-973C-4568-99BF-A648754C54E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7836FD92-973C-4568-99BF-A648754C54E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194D953C-89E1-42F7-AB74-776ABEDB9ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194D953C-89E1-42F7-AB74-776ABEDB9ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194D953C-89E1-42F7-AB74-776ABEDB9ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194D953C-89E1-42F7-AB74-776ABEDB9ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AA9697-BBC1-4ADE-8BF2-BC31EE9E347E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

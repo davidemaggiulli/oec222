@@ -19,5 +19,23 @@ namespace OEC222.Lib
             } while (!double.TryParse(input, out result));
             return result;
         }
+
+        public static int ReadNaturalFromConsole(string msg)
+        {
+            int result;
+            string input = string.Empty;
+            do
+            {
+                Console.Write(msg);
+                input = Console.ReadLine();
+            } while (!int.TryParse(input, out result) || result <= 0);
+            return result;
+        }
+
+        public static string ReadStringFromConsole(string msg)
+        {
+            Console.Write(msg);
+            return Console.ReadLine();
+        }
     }
 }

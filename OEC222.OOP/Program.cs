@@ -1,4 +1,6 @@
 ﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
+using System.Text;
 
 namespace OEC222.Day1
 {
@@ -84,8 +86,18 @@ namespace OEC222.Day1
 
             Console.WriteLine(pi.ToString("R"));
 
+
+            StringBuilder sb = new StringBuilder();
+            for(int i = 0; i < 1000000; i++)
+            {
+                sb.Append(i.ToString());
+            }
+            //Console.WriteLine(sb.ToString());
+            
             Console.ReadLine();
 
+
+            
         }
     }
 }
