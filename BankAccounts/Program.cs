@@ -47,6 +47,18 @@ namespace BankAccounts
                         AccountDetails();
                         break;
 
+                    case "6":
+                        AccountsByBankName();
+                        break;
+                    case "7":
+                        AccountByHolder();
+                        break;
+                    case "8":
+                        AccountsByMinAmount();
+                        break;
+                    case "9":
+                        AccountsByAmountRange();
+                        break;
                     case "H":
                     case "h":
                         PrintMenu();
@@ -74,6 +86,10 @@ namespace BankAccounts
             _logger.Info("[ 3 ] - Prelievo");
             _logger.Info("[ 4 ] - Deposito");
             _logger.Info("[ 5 ] - Dettagli Account");
+            _logger.Info("[ 6 ] - Cercare Accounts per banca");
+            _logger.Info("[ 7 ] - Cercare Account per titolare");
+            _logger.Info("[ 8 ] - Cercare Accounts per importo minimo [min]");
+            _logger.Info("[ 9 ] - Cercare Accounts per range di importo [min-max]");
             _logger.Info("[ H ] - Help");
             _logger.Info("[ Q ] - Uscita");
         }
@@ -162,5 +178,23 @@ namespace BankAccounts
             _logger.Info(account.Statement());
         }
 
+
+
+        private static void AccountsByBankName()
+        {
+
+        }
+        private static void AccountByHolder()
+        {
+
+        }
+        private static void AccountsByMinAmount()
+        {
+
+        }
+        private static void AccountsByAmountRange()
+        {
+
+        }
     }
 }
