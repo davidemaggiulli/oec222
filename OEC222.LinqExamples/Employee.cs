@@ -24,5 +24,10 @@ namespace OEC222.LinqExamples
             Ral = ral;
             Office = office;
         }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}\t{Ral:C2}\t{BirthDate:d}\t{Height}cm\t{Weight}Kg";
+        }
     }
 }

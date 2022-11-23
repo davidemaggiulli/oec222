@@ -24,5 +24,7 @@ namespace OEC222.LinqExamples
         public int Age => DateTime.Now.Year - BirthDate.Year;
 
         public Gender Gender { get; }
+
+        
     }
 }

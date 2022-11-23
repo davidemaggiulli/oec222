@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateExamples", "Delegat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.LinqExamples", "OEC222.LinqExamples\OEC222.LinqExamples.csproj", "{A4918A7C-D733-4616-8D93-BDC86A621EA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExample", "GenericExample\GenericExample.csproj", "{88701AEA-53EE-44D6-A074-9E6A6C073A3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A4918A7C-D733-4616-8D93-BDC86A621EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4918A7C-D733-4616-8D93-BDC86A621EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4918A7C-D733-4616-8D93-BDC86A621EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88701AEA-53EE-44D6-A074-9E6A6C073A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88701AEA-53EE-44D6-A074-9E6A6C073A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88701AEA-53EE-44D6-A074-9E6A6C073A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88701AEA-53EE-44D6-A074-9E6A6C073A3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

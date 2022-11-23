@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OEC222.LinqExamples
+namespace GenericExample
 {
-    internal enum Gender
+    internal class Foo : IFoo
     {
-        Male = 10,
-
-        Female = 20,
-
-        Undefined = 30
     }
 }

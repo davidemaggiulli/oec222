@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace OEC222.LinqExamples
 {
-    internal enum Gender
+    internal class EmployeeWithRal
     {
-        Male = 10,
+        public string Name { get; set; }
 
-        Female = 20,
-
-        Undefined = 30
+        public decimal Ral { get; set; }
     }
 }
