@@ -41,7 +41,7 @@
             }
             if(list2 is GenericList<string>)
             {
-
+                var temp = (GenericList<string>)list2;
             }
             if(list2 is string)
             {
@@ -64,6 +64,14 @@
 
 
             list4 = list;
+
+            int num = 123434343;
+            long lng = num;
+
+            double pi = Math.PI;
+            int a = (int)pi;
+
+            double num2 = num;
 
 
             Console.ReadLine();
