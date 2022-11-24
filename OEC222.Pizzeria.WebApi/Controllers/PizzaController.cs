@@ -17,9 +17,9 @@ namespace OEC222.Pizzeria.WebApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type=typeof(IEnumerable<Pizza>))]
-        public async Task<IActionResult> GetPizzas()
+        public async Task<IActionResult> GetPizzas(decimal? filter = null)
         {
-            var result = await _logic.GetAllPizzas();
+            var result = await _logic.GetAllPizzas(filter);
             return Ok(result);
         }
 

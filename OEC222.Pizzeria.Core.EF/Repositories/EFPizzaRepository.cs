@@ -56,12 +56,17 @@ namespace OEC222.Pizzeria.Core.EF.Repositories
 
         public async Task<IEnumerable<Pizza>> FetchAsync(Func<Pizza, bool> filter = null)
         {
-            if (filter == null)
-                return await _dbContext.Pizzas
-                    .Include(x => x.Compositions)
-                        .ThenInclude(x => x.Ingredient)
-                    .ToListAsync();
-            return _dbContext.Pizzas.Where(filter).ToList();
+            var query = _dbContext.Pizzas
+                .Include(x => x.Compositions)
+                .ThenInclude(x => x.Ingredient)
+                .AsQueryable();
+            if(filter != null)
+            {
+                query = query.Where(filter)
+                .AsQueryable();
+            }
+
+            return query.ToList();
         }
 
         public async Task<Pizza> GetByIdAsync(object id)

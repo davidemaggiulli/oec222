@@ -17,16 +17,17 @@ namespace OEC222.Pizzeria.Web.Utils
 
         public void Dispose()
         {
-            if(_httpClient != null)
-            {
-                _httpClient.Dispose();
-                _httpClient = null;
-            }
+            _httpClient?.Dispose();
+            _httpClient = null;
         }
 
-        public async Task<IEnumerable<PizzaContract>> GetAllPizzas()
+        public async Task<IEnumerable<PizzaContract>> GetAllPizzas(decimal? filter = null)
         {
-            var response = await _httpClient.GetAsync("api/pizza");
+            string url = filter.HasValue
+                ? $"api/pizza?filter={filter.Value}"
+                : "api/pizza";
+            var response = await _httpClient.GetAsync(url);
+
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();

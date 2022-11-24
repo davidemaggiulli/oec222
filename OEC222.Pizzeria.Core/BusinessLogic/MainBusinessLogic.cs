@@ -65,8 +65,12 @@ namespace OEC222.Pizzeria.Core.BusinessLogic
             return await _pizzaRepository.AddItemAsync(pizza);
         }
 
-        public async Task<IEnumerable<Pizza>> GetAllPizzas()
+        public async Task<IEnumerable<Pizza>> GetAllPizzas(decimal? filter = null)
         {
+            if(filter.HasValue)
+            {
+                return await _pizzaRepository.FetchAsync(p => p.Price >= filter.Value);
+            }
             return await _pizzaRepository.FetchAsync();
         }
     }

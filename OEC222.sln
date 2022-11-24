@@ -19,29 +19,35 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccounts", "BankAccount
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateExamples", "DelegateExamples\DelegateExamples.csproj", "{4AD320A5-2F58-44BA-9B57-EC1B2D177A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.LinqExamples", "OEC222.LinqExamples\OEC222.LinqExamples.csproj", "{A4918A7C-D733-4616-8D93-BDC86A621EA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.LinqExamples", "OEC222.LinqExamples\OEC222.LinqExamples.csproj", "{A4918A7C-D733-4616-8D93-BDC86A621EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericExample", "GenericExample\GenericExample.csproj", "{88701AEA-53EE-44D6-A074-9E6A6C073A3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericExample", "GenericExample\GenericExample.csproj", "{88701AEA-53EE-44D6-A074-9E6A6C073A3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Conversions", "OEC222.Conversions\OEC222.Conversions.csproj", "{6FD6F054-D072-4D4A-971B-7ADCE6065292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Conversions", "OEC222.Conversions\OEC222.Conversions.csproj", "{6FD6F054-D072-4D4A-971B-7ADCE6065292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.AsyncExamples", "OEC222.AsyncExamples\OEC222.AsyncExamples.csproj", "{2EB49132-B875-49D4-8ACD-CB0ECDD1474A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.AsyncExamples", "OEC222.AsyncExamples\OEC222.AsyncExamples.csproj", "{2EB49132-B875-49D4-8ACD-CB0ECDD1474A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.AsyncWinForms", "OEC222.AsyncWinForms\OEC222.AsyncWinForms.csproj", "{5E035DEF-9DE1-4DA1-BF71-F7DE840A594E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.AsyncWinForms", "OEC222.AsyncWinForms\OEC222.AsyncWinForms.csproj", "{5E035DEF-9DE1-4DA1-BF71-F7DE840A594E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pizzeria", "Pizzeria", "{7DF76936-EE1B-442C-BF8D-F8DE685DC098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.Core", "OEC222.Pizzeria.Core\OEC222.Pizzeria.Core.csproj", "{E10ABA08-0F59-4171-8905-D1A7E08F4B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.Core", "OEC222.Pizzeria.Core\OEC222.Pizzeria.Core.csproj", "{E10ABA08-0F59-4171-8905-D1A7E08F4B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.Core.Mock", "OEC222.Pizzeria.Core.Mock\OEC222.Pizzeria.Core.Mock.csproj", "{A1024304-8C4C-4575-B676-E311F0E7321B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.Core.Mock", "OEC222.Pizzeria.Core.Mock\OEC222.Pizzeria.Core.Mock.csproj", "{A1024304-8C4C-4575-B676-E311F0E7321B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.Core.EF", "OEC222.Pizzeria.Core.EF\OEC222.Pizzeria.Core.EF.csproj", "{62F5067C-F7DC-4311-AA84-CDE6B8EF39FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.Core.EF", "OEC222.Pizzeria.Core.EF\OEC222.Pizzeria.Core.EF.csproj", "{62F5067C-F7DC-4311-AA84-CDE6B8EF39FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.ConsoleApp", "OEC222.Pizzeria.ConsoleApp\OEC222.Pizzeria.ConsoleApp.csproj", "{C7B63C02-A819-4C3F-928C-BC049DC42F89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.ConsoleApp", "OEC222.Pizzeria.ConsoleApp\OEC222.Pizzeria.ConsoleApp.csproj", "{C7B63C02-A819-4C3F-928C-BC049DC42F89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.WebApi", "OEC222.Pizzeria.WebApi\OEC222.Pizzeria.WebApi.csproj", "{6F3B8126-CFBD-416B-9A69-9AFBF50F3B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.WebApi", "OEC222.Pizzeria.WebApi\OEC222.Pizzeria.WebApi.csproj", "{6F3B8126-CFBD-416B-9A69-9AFBF50F3B8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.Pizzeria.Web", "OEC222.Pizzeria.Web\OEC222.Pizzeria.Web.csproj", "{5083ED57-DA53-4BFD-96C3-C1C9083D3BC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.Pizzeria.Web", "OEC222.Pizzeria.Web\OEC222.Pizzeria.Web.csproj", "{5083ED57-DA53-4BFD-96C3-C1C9083D3BC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OEC222.NullableExamples", "OEC222.NullableExamples\OEC222.NullableExamples.csproj", "{5D5F3E0D-E4DA-48E3-9722-6D122B33BFCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EOC222.FolderWatcher", "EOC222.FolderWatcher\EOC222.FolderWatcher.csproj", "{3241E3DE-796C-48AF-9C0A-45AC051B76E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.WPFExample", "OEC222.WPFExample\OEC222.WPFExample.csproj", "{A10018E9-7B58-4BD7-88FC-F0DBCE98E18D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +131,18 @@ Global
 		{5083ED57-DA53-4BFD-96C3-C1C9083D3BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5083ED57-DA53-4BFD-96C3-C1C9083D3BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5083ED57-DA53-4BFD-96C3-C1C9083D3BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5F3E0D-E4DA-48E3-9722-6D122B33BFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5F3E0D-E4DA-48E3-9722-6D122B33BFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5F3E0D-E4DA-48E3-9722-6D122B33BFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5F3E0D-E4DA-48E3-9722-6D122B33BFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3241E3DE-796C-48AF-9C0A-45AC051B76E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3241E3DE-796C-48AF-9C0A-45AC051B76E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3241E3DE-796C-48AF-9C0A-45AC051B76E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3241E3DE-796C-48AF-9C0A-45AC051B76E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10018E9-7B58-4BD7-88FC-F0DBCE98E18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10018E9-7B58-4BD7-88FC-F0DBCE98E18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10018E9-7B58-4BD7-88FC-F0DBCE98E18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10018E9-7B58-4BD7-88FC-F0DBCE98E18D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

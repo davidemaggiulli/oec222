@@ -46,5 +46,17 @@ namespace OEC222.Pizzeria.Web.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> Search(decimal? filter = null)
+        {
+            var data = await _client.GetAllPizzas(filter);
+            var models = data.Select(x => new PizzaViewModel(
+               x.Name,
+               x.Price,
+               x.Compositions.Count(),
+               x.Compositions.Any(c => c.IngredientCode == "MRZ")
+           ));
+            return PartialView("PizzaTable", models);
+        }
     }
 }
