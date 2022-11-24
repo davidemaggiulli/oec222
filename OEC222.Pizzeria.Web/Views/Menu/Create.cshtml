@@ -1,0 +1,48 @@
+﻿@model CreatePizzaViewModel
+@{
+    ViewBag.Title = "Crea Pizza";
+}
+<h1>Crea Pizza</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+    <div class="row mb-3">
+        <div class="col-12 col-sm-4 text-sm-end">
+            <label asp-for="Code"></label>
+        </div>
+        <div class="col-12 col-sm-8">
+            <input asp-for="Code" class="form-control" />
+            <span asp-validation-for="Code"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12 col-sm-4 text-sm-end">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-12 col-sm-8">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12 col-sm-4 text-sm-end">
+            <label asp-for="Price"></label>
+        </div>
+        <div class="col-12 col-sm-8">
+            <input asp-for="Price" class="form-control" type="number" min="4" max="2000" step="0.5"/>
+            <span asp-validation-for="Price"></span>
+        </div>
+    </div>
+
+    <hr />
+    <div class="row mb-3">
+       <div class="col-12 text-center">
+           <a asp-action="Index" class="btn btn-secondary">
+               Annulla
+           </a>
+           <button type="submit" class="btn btn-primary">
+               Aggiungi
+           </button>
+       </div>
+    </div>
+</form>

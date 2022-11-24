@@ -10,7 +10,7 @@
             foreach (var i in v)
                 Console.Write($" {i}");
 
-            FuncWithOut(ref v);
+            //FuncWithOut(ref v);
             Console.WriteLine();
             foreach (var i in v)
                 Console.Write($" {i}");

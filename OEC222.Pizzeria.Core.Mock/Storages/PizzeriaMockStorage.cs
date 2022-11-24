@@ -18,6 +18,9 @@ namespace OEC222.Pizzeria.Core.Mock.Storages
         public static void Initialize()
         {
             Pizzas = new List<Pizza>();
+            Ingredients = new List<Ingredient>();
+            Compositions = new List<Composition>();
+
             Pizza margheritaP = new Pizza
             {
                 Code = "MRG",

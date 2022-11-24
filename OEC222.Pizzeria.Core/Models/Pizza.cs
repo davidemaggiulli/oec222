@@ -11,7 +11,8 @@ namespace OEC222.Pizzeria.Core.Models
         public string Code { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-
         public IList<Composition> Compositions { get; set; }
+
+        public string FormattedPrice => $"{Price}:C2";
     }
 }

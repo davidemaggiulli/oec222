@@ -9,6 +9,7 @@ namespace OEC222.Pizzeria.Core.Interfaces
 {
     public interface IMainBusinessLogic
     {
+        Task<IEnumerable<Pizza>> GetAllPizzas();
         Task<BLResult> InsertNewPizzaAsync(string code, string name, decimal price);
 
         Task<BLResult> AssignIngredientToPizzaAsync(string codePizza, string codeIngredient, float qty);

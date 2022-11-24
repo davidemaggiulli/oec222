@@ -10,7 +10,7 @@
 
             byte number = d;        //Conversione implicita
 
-            Digit d1 = number;
+            //Digit d1 = number;
 
 
         }

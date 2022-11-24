@@ -36,6 +36,8 @@ namespace OEC222.Pizzeria.Core.EF
             builder.Entity<Pizza>().Property(x => x.Code).IsRequired().HasColumnType("char").HasMaxLength(3);
             builder.Entity<Pizza>().Property(x => x.Name).IsRequired().HasColumnType("varchar").HasMaxLength(50);
             builder.Entity<Pizza>().Property(x => x.Price).HasColumnType("decimal(8,4)");
+            builder.Entity<Pizza>().HasIndex(x => x.Name);
+            builder.Entity<Pizza>().Ignore(x => x.FormattedPrice);
 
             builder.Entity<Ingredient>().ToTable("Ingredient");
             builder.Entity<Ingredient>().HasKey(x => x.Code);
