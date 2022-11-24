@@ -10,7 +10,7 @@ namespace OEC222.Pizzeria.ConsoleApp
             
             using PizzeriaDbContext db = new PizzeriaDbContext();
             var pizzas = db.Pizzas;
-
+            Console.WriteLine(MyDynamicVar.GetType());
         }
     }
 }

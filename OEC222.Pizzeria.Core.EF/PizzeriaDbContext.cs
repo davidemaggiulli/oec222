@@ -25,7 +25,7 @@ namespace OEC222.Pizzeria.Core.EF
             options.LogTo((s) => System.Console.WriteLine(s));
             if (!options.IsConfigured)
             {
-                options.UseSqlServer(@"Server=.\SQLEXPRESS;Initial Catalog=Pizzeria;Integrated Security=true;MultipleActiveResultSets=true");
+                options.UseSqlServer(@"Server=.\SQLEXPRESS;Initial Catalog=Pizzeria;Integrated Security=true;MultipleActiveResultSets=true;Trust Server Certificate=true");
             }
         }
 
