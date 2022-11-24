@@ -5,14 +5,23 @@ using System.Text.Json;
 
 namespace OEC222.Pizzeria.Web.Utils
 {
-    public class PizzeriaApiClient
+    public class PizzeriaApiClient : IDisposable
     {
-        private readonly HttpClient _httpClient;
+        private HttpClient _httpClient;
 
         public PizzeriaApiClient()
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("https://localhost:7277/");
+        }
+
+        public void Dispose()
+        {
+            if(_httpClient != null)
+            {
+                _httpClient.Dispose();
+                _httpClient = null;
+            }
         }
 
         public async Task<IEnumerable<PizzaContract>> GetAllPizzas()
