@@ -19,11 +19,15 @@ namespace OEC222.Lib
 
         public static FileLogger GetIstance()
         {
-            lock (l)
+            if(instance == null)
             {
-                if (instance == null)
-                    instance = new FileLogger();
+                lock (l)
+                {
+                    if (instance == null)
+                        instance = new FileLogger();
+                }
             }
+            
             return instance;
         }
 

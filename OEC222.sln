@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.WPFExample", "OEC222
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.EventsExamples", "OEC222.EventsExamples\OEC222.EventsExamples.csproj", "{8C9A1F42-FCDE-43CA-A909-9B3295CBAE15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEC222.TPLExamples", "OEC222.TPLExamples\OEC222.TPLExamples.csproj", "{E4203B77-150B-4372-AE86-EF4D3F175BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,10 @@ Global
 		{8C9A1F42-FCDE-43CA-A909-9B3295CBAE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C9A1F42-FCDE-43CA-A909-9B3295CBAE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C9A1F42-FCDE-43CA-A909-9B3295CBAE15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4203B77-150B-4372-AE86-EF4D3F175BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4203B77-150B-4372-AE86-EF4D3F175BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4203B77-150B-4372-AE86-EF4D3F175BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4203B77-150B-4372-AE86-EF4D3F175BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
